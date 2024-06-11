@@ -15,17 +15,18 @@ const handleResponse = async (response: Response) => {
 };
 
 const todoService = {
+
+  findAllTodos: async () => {
+    const response = await fetch(baseURL);
+    return handleResponse(response);
+  },
+
   createTodo: async (data: CreateTodoDTO) => {
     const response = await fetch(baseURL, {
       method: "POST",
       headers,
       body: JSON.stringify(data),
     });
-    return handleResponse(response);
-  },
-
-  findAllTodos: async () => {
-    const response = await fetch(baseURL);
     return handleResponse(response);
   },
 
@@ -47,7 +48,7 @@ const todoService = {
     const response = await fetch(`${baseURL}/${id}`, {
       method: "DELETE",
     });
-     return response;
+    return response;
   },
 
   findAllCategories: async () => {

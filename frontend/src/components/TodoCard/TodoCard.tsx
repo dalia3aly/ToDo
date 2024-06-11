@@ -45,7 +45,7 @@ const TodoCard: React.FC<TodoCardProps> = ({ todo, onDelete, onUpdate }) => {
   };
 
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg mb-4">
+    <div className="p-4 bg-beige shadow-md rounded-lg mb-4">
       <EditableField value={todo.title} onSubmit={handleUpdateTitle} />
       <EditableField
         value={todo.description}
