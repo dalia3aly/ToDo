@@ -5,7 +5,7 @@ import Modal from "../../components/Modal/Modal";
 import Button from "../../components/Button/Button";
 import TaskForm from "../../components/TaskForm/TaskForm";
 
-const TodoContainer: React.FC = () => {
+const TodosContainer: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [filter, setFilter] = useState<string>("all");
@@ -88,4 +88,4 @@ const TodoContainer: React.FC = () => {
   );
 };
 
-export default TodoContainer;
+export default TodosContainer;

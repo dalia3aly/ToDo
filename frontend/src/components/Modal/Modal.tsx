@@ -17,6 +17,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
             ×
           </button>
         </div>
+        <h2 className="text-2xl font-semibold flex items-center justify-center text-gray-800">
+          Add a Task
+        </h2>
         <div className="mt-4">{children}</div>
       </div>
     </div>

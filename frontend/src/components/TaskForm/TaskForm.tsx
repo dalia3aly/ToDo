@@ -26,8 +26,11 @@ const TaskForm: React.FC<TaskFormProps> = ({ onSave, onClose, categories }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label className="block text-gray-700">Title:</label>
+        <label htmlFor="title" className="block text-gray-700">
+          Title:
+        </label>
         <input
+          id="title"
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -35,15 +38,21 @@ const TaskForm: React.FC<TaskFormProps> = ({ onSave, onClose, categories }) => {
         />
       </div>
       <div>
-        <label className="block text-gray-700">Description:</label>
+        <label htmlFor="description" className="block text-gray-700">
+          Description:
+        </label>
         <textarea
+          id="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           className="mt-1 p-2 block w-full border border-gray-300 rounded-md"></textarea>
       </div>
       <div>
-        <label className="block text-gray-700">Category:</label>
+        <label htmlFor="category" className="block text-gray-700">
+          Category:
+        </label>
         <select
+          id="category"
           value={categoryId}
           onChange={(e) => setCategoryId(Number(e.target.value))}
           className="mt-1 p-2 block w-full border border-gray-300 rounded-md">
