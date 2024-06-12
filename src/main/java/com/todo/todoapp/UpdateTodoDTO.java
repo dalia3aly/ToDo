@@ -6,7 +6,6 @@ public class UpdateTodoDTO {
 
     private Boolean completed;
 
-
     @Size(min = 1, message = "Title cannot be empty")
     private String title;
 
@@ -17,6 +16,10 @@ public class UpdateTodoDTO {
 
     public Boolean getCompleted() {
         return completed;
+    }
+
+    public void setCompleted(Boolean completed) {
+        this.completed = completed;
     }
 
     public String getTitle() {

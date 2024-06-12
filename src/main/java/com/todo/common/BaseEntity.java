@@ -20,17 +20,21 @@ public abstract class BaseEntity {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, updatable = false)
-    private Date createdAt; 
+    private Date createdAt;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column 
+    @Column
     private Date updatedAt;
-    
+
     public BaseEntity() {
     }
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Date getCreatedAt() {
