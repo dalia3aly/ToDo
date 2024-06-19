@@ -16,7 +16,8 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(@NotNull CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:5173", "https://Mytodos-app.netlify.app")
+                        .allowedOrigins("http://localhost:5173", 
+                                "http://localhost:5174","https://Mytodos-app.netlify.app")
                         .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE")
                         .allowedHeaders("*");
             }
